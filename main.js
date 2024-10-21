@@ -22,9 +22,29 @@ function round(value, decimals) {
 // Round to the user's number of decimals
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
-    let d = Number(document.getElementById("rounding").value)
-
+    let d = Number(document.getElementById("rounding").value);
+    return d
 }
+
+
+//ON YOUR MARK, GET SET, GO pls
+
+//Part 1.1
+function delta(a, b) {
+    return a - b;
+}
+
+//Part 1.2
+function slope(x1, y1, x2, y2) {
+    let m = delta(y2, y1) / delta(x2, x1);
+    return m;
+}
+
+//Part 1.3
+function average(n1, n2) {
+    return (n1 + n2) / 2;
+}
+
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
