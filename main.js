@@ -9,6 +9,10 @@
 'use strict';
 
 /*** Event Listeners ***/
+
+// volume button is the id in html to decide when to listen, click is what to listen for, volume is the function done
+document.getElementById("rect_prism_volume_button").addEventListener("click",rect_prism_volume);
+
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
 
@@ -47,7 +51,14 @@ function length(x1, y1, x2, y2) {
     return l_coordinates;
 }
 
-//Part 1.6
+//Part 1.7
+function rect_prism_volume() {
+    let length = Number(document.getElementById("length").value);
+    let width = Number(document.getElementById("width").value);
+    let height = Number(document.getElementById("height").value);
+    let rect_volume = (length * width * height);
+    document.getElementById("rect_prism_volume_answer").textContent = `The volume for the rectangular prism is: ${rect_volume}.`;
+}
 
 
 
