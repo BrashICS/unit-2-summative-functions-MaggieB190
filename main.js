@@ -12,6 +12,9 @@
 
 // volume button is the id in html to decide when to listen, click is what to listen for, volume is the function done
 document.getElementById("rect_prism_volume_button").addEventListener("click",rect_prism_volume);
+document.getElementById("rect_prism_area_button").addEventListener("click",rect_prism_area);
+
+document.getElementById("sphere_area_button").addEventListener("click", sphere_area);
 
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
@@ -56,10 +59,28 @@ function rect_prism_volume() {
     let length = Number(document.getElementById("length").value);
     let width = Number(document.getElementById("width").value);
     let height = Number(document.getElementById("height").value);
-    let rect_volume = (length * width * height);
+    let rect_volume = round_user(length * width * height);
     document.getElementById("rect_prism_volume_answer").textContent = `The volume for the rectangular prism is: ${rect_volume}.`;
 }
 
+//Part 1.8
+function rect_prism_area() {
+    let length = Number(document.getElementById("length").value);
+    let width = Number(document.getElementById("width").value);
+    let height = Number(document.getElementById("height").value);
+    let rect_area = round_user(2 *((length * width) + (length * height) + (height * width)));
+    document.getElementById("rect_prism_area_answer").textContent = `The surface area for the rectangular prism is: ${rect_area}.`;
+}
+
+//Part 1.9
+
+//function sphere volume
+
+function sphere_area() {
+    let radius = Number(document.getElementById("radius").value); 
+    let sphere_a = Number(4 * (Math.PI * (radius ** 2)));
+    document.getElementById("sphere_area_answer").textContent = `The area of the sphere is: ${sphere_a}.`;
+}
 
 
 // Calculate the y-value of a parabola from standand form
