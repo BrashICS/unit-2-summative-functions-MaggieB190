@@ -116,10 +116,13 @@ function user_length() {
 }
 
 function midpoint() {
-    let n1 = Number(document.getElementById("x1").value);
-    let n2 = Number(document.getElementById("x2").value);
-    let user_mid_x = Number(average(n1, n2));
-    document.getElementById("user_midpoint_answer").textContent = `The midpoint of the two points is: ${user_mid_x},`;
+    let x1 = Number(document.getElementById("x1").value);
+    let x2 = Number(document.getElementById("x2").value);
+    let y1 = Number(document.getElementById("y1").value);
+    let y2 = Number(document.getElementById("y2").value);
+    let user_mid_x = Number(average(x1, x2));
+    let user_mid_y = Number(average(y1, y2));
+    document.getElementById("user_midpoint_answer").textContent = `The midpoint of the two points is: (${user_mid_x}, ${user_mid_y}).`; 
 }
 
 
