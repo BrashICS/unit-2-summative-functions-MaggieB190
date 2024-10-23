@@ -128,15 +128,21 @@ function midpoint() {
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
-
+    let y = Number((a * (x ** 2)) + (b * x) + c);
+    return y;
 }
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
-function zeros() {
-}
+//when y=o then find x's
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
-
+    let a_vertex = Number(document.getElementById("a").value);
+    let b_vertex = Number(document.getElementById("b").value);
+    let c_vertex = Number(document.getElementById("c").value);
+    let x_vertex = Number(round_user((-b_vertex) / (2 * a_vertex)));
+    let y_vertex = round_user(y_quad(a_vertex, b_vertex, c_vertex, x_vertex));
+    console.log(`(${x_vertex}, ${y_vertex})`);
+    document.getElementById("quadratic_output").textContent = `The vertex of this function is: (${x_vertex}, ${y_vertex}).`; 
 }
 
