@@ -134,6 +134,14 @@ function y_quad(a, b, c, x) {
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 //when y=o then find x's
+function zeros() {
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+    let x = (0 = (a * (x ** 2)) + (b * x) + c);
+    document.getElementById("quadratic_output").textContent = `The zeros of this function are: ${} and ${}.`; 
+}
+//does not work ^ ):
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
