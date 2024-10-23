@@ -84,14 +84,14 @@ function rect_prism_area() {
 //function sphere volume
 function sphere_volume() {
     let radius = Number(document.getElementById("radius").value);
-    let sphere_v = Number(4 / 3 *(Math.PI *(radius ** 3)));
+    let sphere_v = Number(round_user(4 / 3 *(Math.PI *(radius ** 3))));
     document.getElementById("sphere_volume_answer").textContent = `The volume of the sphere is: ${sphere_v}.`;
 }
 
 //function sphere area
 function sphere_area() {
     let radius = Number(document.getElementById("radius").value); 
-    let sphere_a = Number(4 * (Math.PI * (radius ** 2)));
+    let sphere_a = Number(round_user(4 * (Math.PI * (radius ** 2))));
     document.getElementById("sphere_area_answer").textContent = `The area of the sphere is: ${sphere_a}.`;
 }
 
@@ -134,13 +134,7 @@ function y_quad(a, b, c, x) {
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 //when y=o then find x's
-function zeros() {
-    let a = Number(document.getElementById("a").value);
-    let b = Number(document.getElementById("b").value);
-    let c = Number(document.getElementById("c").value);
-    let x = (0 = (a * (x ** 2)) + (b * x) + c);
-    document.getElementById("quadratic_output").textContent = `The zeros of this function are: ${} and ${}.`; 
-}
+
 //does not work ^ ):
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
