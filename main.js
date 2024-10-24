@@ -102,7 +102,7 @@ function user_slope() {
     let y1 = Number(document.getElementById("y1").value);
     let x2 = Number(document.getElementById("x2").value);
     let y2 = Number(document.getElementById("y2").value);
-    let user_m = Number(round_user(delta(y2, y1) / delta(x2, x1)));
+    let user_m = Number(round_user(slope(x1, y1, x2, y2)));
     document.getElementById("user_slope_points_answer").textContent = `The slope of the two points is: ${user_m}.`;
 }
 
@@ -111,7 +111,7 @@ function user_length() {
     let y1 = Number(document.getElementById("y1").value);
     let x2 = Number(document.getElementById("x2").value);
     let y2 = Number(document.getElementById("y2").value);
-    let user_length = round_user(Math.sqrt((delta(y2, y1) ** 2) + (delta(x2, x1) ** 2)));
+    let user_length = Number(round_user(length(x1, y1, x2, y2)));
     document.getElementById("user_length_points_answer").textContent = `The length between the two points is: ${user_length}.`;
 }
 
@@ -120,8 +120,8 @@ function midpoint() {
     let x2 = Number(document.getElementById("x2").value);
     let y1 = Number(document.getElementById("y1").value);
     let y2 = Number(document.getElementById("y2").value);
-    let user_mid_x = Number(average(x1, x2));
-    let user_mid_y = Number(average(y1, y2));
+    let user_mid_x = Number(round_user(average(x1, x2)));
+    let user_mid_y = Number(round_user(average(y1, y2)));
     document.getElementById("user_midpoint_answer").textContent = `The midpoint of the two points is: (${user_mid_x}, ${user_mid_y}).`; 
 }
 
@@ -135,16 +135,23 @@ function y_quad(a, b, c, x) {
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 //when y=o then find x's
 
-//does not work ^ ):
+function zeros() {
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+    let x1 = round_user(((-b) +(Math.sqrt((b ** 2) - (4 * a * c))))/ (2 * a));
+    let x2 = round_user(((-b) -(Math.sqrt((b ** 2) - (4 * a * c))))/ (2 * a));
+    console.log(`(${x1}, 0), (${x2}, 0)`);
+    document.getElementById("quadratic_output_zeros").textContent = `The zeros of this parabola is: (${x1}, 0) and (${x2}, 0).`; 
+}
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
-    let a_vertex = Number(document.getElementById("a").value);
-    let b_vertex = Number(document.getElementById("b").value);
-    let c_vertex = Number(document.getElementById("c").value);
-    let x_vertex = Number(round_user((-b_vertex) / (2 * a_vertex)));
-    let y_vertex = round_user(y_quad(a_vertex, b_vertex, c_vertex, x_vertex));
-    console.log(`(${x_vertex}, ${y_vertex})`);
-    document.getElementById("quadratic_output").textContent = `The vertex of this function is: (${x_vertex}, ${y_vertex}).`; 
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+    let x = Number(round_user((-b) / (2 * a)));
+    let y = round_user(y_quad(a, b, c, x));
+    console.log(`(${x}, ${y})`);
+    document.getElementById("quadratic_output_vertex").textContent = `The vertex of this parabola is: (${x}, ${y}).`; 
 }
-
