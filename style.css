@@ -5,7 +5,7 @@
 
 /* Using font-size: larger to make things pop. Feel free to change. */
 body {
-    background-color:lightcyan;
+    background-color:rgb(253, 201, 208);
     margin: 20px;
     font-size: larger;
 }
@@ -20,7 +20,27 @@ button, input {
     vertical-align: auto;
 }
 
+.joke_image {
+    border: 3px solid;
+    border-color: white;
+}
+
 /* Rounding and Quadratics input number boxes. Add class="short_number" to your input boxes */
 .short_number {
     width: 50px;
+}
+
+hr {
+    height: 3px;
+    border: none;
+    background-color:white;
+}
+
+button {
+    border:3px solid;
+    border-color: white;
+    background-color: black;
+    color: white;
+    height: 35px;
+    cursor: pointer;
 }

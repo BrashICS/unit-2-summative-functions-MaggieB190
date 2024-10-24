@@ -14,6 +14,9 @@
 document.getElementById("rect_prism_volume_button").addEventListener("click",rect_prism_volume);
 document.getElementById("rect_prism_area_button").addEventListener("click",rect_prism_area);
 
+document.getElementById("triangle_prism_volume_button").addEventListener("click",triangle_prism_volume);
+document.getElementById("triangle_prism_area_button").addEventListener("click",triangle_prism_area);
+
 document.getElementById("sphere_area_button").addEventListener("click", sphere_area);
 document.getElementById("sphere_volume_button").addEventListener("click", sphere_volume);
 
@@ -77,6 +80,25 @@ function rect_prism_area() {
     let height = Number(document.getElementById("height").value);
     let rect_area = round_user(2 *((length * width) + (length * height) + (height * width)));
     document.getElementById("rect_prism_area_answer").textContent = `The surface area for the rectangular prism is: ${rect_area}.`;
+}
+
+//triangular prsim volume
+function triangle_prism_volume() {
+    let length_trig = Number(document.getElementById("length_trig").value);
+    let base_trig = Number(document.getElementById("base_trig").value);
+    let height_trig = Number(document.getElementById("height_trig").value);
+    let triangle_volume = round_user((length_trig * base_trig * height_trig) / 2);
+    document.getElementById("triangle_prism_volume_answer").textContent = `The volume for the triangular prism is: ${triangle_volume}.`;
+}
+
+//triangular prism area
+function triangle_prism_area() {
+    let length_trig = Number(document.getElementById("length_trig").value);
+    let base_trig = Number(document.getElementById("base_trig").value);
+    let height_trig = Number(document.getElementById("height_trig").value);
+    let triangle_area = round_user();
+    //MUST MAKE FORUMLA^^^^^
+    document.getElementById("triangle_prism_area_answer").textContent = `The surface area of the triangular prism is: ${triangle_area}.`;
 }
 
 //Part 1.9
