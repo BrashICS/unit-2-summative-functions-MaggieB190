@@ -28,17 +28,194 @@
         
         <!-- Geometry -->
         <div>
-            <h4>Part 1 - Geometry</h4>
+            <h3>Part 1 - Geometry</h3>
+
+            <img class ="joke_image" src="./images/circle_joke.jpg" width="20%">
+
+            <br>
+
+            <!--Cube-->
+            <p>
+            <img src="./images/icons/cube_icon.png" width="5%">
+             <br>
+            Enter the value of "Base" for the cube:
+            </p>
             
+            <label for="base_cube">Base:</label>
+            <input id="base_cube" name="length" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="cube_volume_button">Cube Volume</button> 
+            <button id="cube_area_button">Cube Surface Area</button> 
+
+            <!--Cube output-->
+            <div id="cube_volume_answer"></div>
+            <div id="cube_area_answer"></div>
+
+            <br>
+
+            <!--Rectangular Prism-->
+            <p>
+                <img src="./images\icons\rectangle_icon.png" width="5%">
+                <br>
+                Enter the values of "Length", "Width", and "Height" for the rectangular prism:
+            </p>
+            
+            <label for="length">Length:</label>
+            <input id="length" name="length" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="width">Width:</label>
+            <input id="width" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="height">Height:</label>
+            <input id="height" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="rect_prism_volume_button">Rectangular Prism Volume</button> 
+            <button id="rect_prism_area_button">Rectangular Prism Surface Area</button> 
+
+            <!--Rectangular prism output-->
+            <div id="rect_prism_volume_answer"></div>
+            <div id="rect_prism_area_answer"></div>
+
+            <br>
+
+            <!--Triangular Prism-->
+            <p>
+                <img src="./images\icons\triangular_prism_icon.png" width="5%">
+                <br>
+                Enter the values of "Base", "Height", and "Length" for the triangular prism:
+            </p>
+
+            <label for="base_trig">Base:</label>
+            <input id="base_trig" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="height_trig">Height:</label>
+            <input id="height_trig" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="length_trig">Length:</label>
+            <input id="length_trig" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="triangle_prism_volume_button">Triangular Prism Volume</button> 
+            <button id="triangle_prism_area_button">Triangular Prism Surface Area</button> 
+
+            <br>
+
+            <img class ="diagram" src="./images/triangular_prism_diagram_background.jpg" width="20%">
+
+            <!--Square-based Pyramid output-->
+            <div id="triangle_prism_volume_answer"></div>
+            <div id="triangle_prism_area_answer"></div>
+
+            <br>
+
+            <!--Square-based Pyramid-->
+            <p>
+                <img src="./images\icons\pyramid_icon.png" width="5%">
+                <br>
+                Enter the values of "Base", and "Height" for the square-based pyramid:
+            </p>
+
+            <label for="base_pyramid">Base:</label>
+            <input id="base_pyramid" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="height_pyramid">Height:</label>
+            <input id="height_pyramid" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="pyramid_volume_button">Pyramid Volume</button> 
+            <button id="pyramid_area_button">Pyramid Surface Area</button> 
+
+            <!--Square-based Pyramid output-->
+            <div id="pyramid_volume_answer"></div>
+            <div id="pyramid_area_answer"></div>
+
+            <br>
+
+            <!--Cylinder-->
+            <p>
+                <img src="./images\icons\cylinder_icon.png" width="5%">
+                <br>
+                Enter the values of "Radius" and "Height" for the cylinder: 
+            </p>
+
+            <label for="radius_cylinder">Radius:</label>
+            <input id="radius_cylinder" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="height_cylinder">Height:</label>
+            <input id="height_cylinder" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="cylinder_volume_button">Cylinder Volume</button> 
+            <button id="cylinder_area_button">Cylinder Surface Area</button> 
+
+            <!--Cylinder output-->
+            <div id="cylinder_volume_answer"></div>
+            <div id="cylinder_area_answer"></div>
+
+            <br>
+
+            <!--Sphere-->
+            <p>
+                <img src="./images\icons\sphere_icon.png" width="5%">
+                <br>
+                Enter the value of "Radius" for the sphere:
+            </p>
+
+            <label for="radius">Radius:</label>
+            <input id="radius" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="sphere_volume_button">Sphere Volume</button> 
+            <button id="sphere_area_button">Sphere Surface Area</button> 
+
+            <!--Sphere output-->
+            <div id="sphere_volume_answer"></div>
+            <div id="sphere_area_answer"></div>
+
+            <br>
+            <br>
+
+            <!--Coordinates-->
+            <p>
+                <img src="./images\icons\coordinate_icon.png" width="5%">
+                <br>
+                Enter the values for the coordinate points:
+            </p>
+
+            <label for="x1">X1:</label>
+            <input id="x1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="y1">Y1:</label>
+            <input id="y1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="x2">X2:</label>
+            <input id="x2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <label for="y2">Y2:</label>
+            <input id="y2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <button id="user_slope_points_button">Slope</button> 
+            <button id="user_length_points_button">Length</button> 
+            <button id="user_midpoint_button">Midpoint</button> 
+
+            <!--Coordinates output-->
+            <div id="user_slope_points_answer"></div>
+            <div id="user_length_points_answer"></div>
+            <div id="user_midpoint_answer"></div>
+
+
         </div>
         
         <hr>
 
         <!-- Quadratics -->
         <div>
-            <h4>Part 2 - Quadratics</h4>
+            <h3>Part 2 - Quadratics</h3>
+
+            <img class ="joke_image" src="./images\parabola_joke.jpg" width="20%">
+
+            <br>
+
             <p>
-                Enter the values of "a", "b", and "c" of a quadratic in standard form:
+                <img src="./images\icons\parabola_icon.png" width="5%">
+                <br>
+                Enter the values of "a", "b", and "c" for a quadratic in standard form:
             </p>
             
             <label for="a">a:</label>
@@ -46,13 +223,18 @@
             <label for="b">b:</label>
             <input id="b" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
             <label for="c">c:</label>
-            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
 
-            <button id="zeros">Find the Zeros</button> 
-            <button id="vertex">Find the Vertex</button>
+            <button id="zeros_button">Zeros</button> 
+            <button id="vertex_button">Vertex</button>
+            <button id="aos_button">Axis of Symmetry</button>
+            <button id="y_intercept_button">Y-Intercept</button>
 
-            <!-- Output for the zeros or vertex -->
-            <div id="quadratic_output"></div>
+            <!-- Output for quadratics-->
+            <div id="quadratic_output_zeros"></div>
+            <div id="quadratic_output_vertex"></div>
+            <div id="quadratic_output_aos"></div>
+            <div id="quadratic_output_y_intercept"></div>
         </div>
 
         
