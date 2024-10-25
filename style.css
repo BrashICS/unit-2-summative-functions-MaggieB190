@@ -20,6 +20,11 @@ button, input {
     vertical-align: auto;
 }
 
+.subtitle {
+    font-size: large;
+    color: white;
+}
+
 .joke_image {
     border: 3px solid;
     border-color: white;
