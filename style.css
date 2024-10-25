@@ -25,6 +25,11 @@ button, input {
     border-color: white;
 }
 
+.diagram {
+    border: 3px solid;
+    border-color: rgb(253, 201, 208);
+}
+
 /* Rounding and Quadratics input number boxes. Add class="short_number" to your input boxes */
 .short_number {
     width: 50px;
@@ -37,10 +42,9 @@ hr {
 }
 
 button {
-    border:3px solid;
+    border: 3px solid;
     border-color: white;
     background-color: black;
     color: white;
-    height: 35px;
     cursor: pointer;
 }
